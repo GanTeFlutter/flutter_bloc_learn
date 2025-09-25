@@ -9,6 +9,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  bloc_test: ^10.0.0
+  flutter_bloc: ^9.1.1
+  bloc_concurrency: ^0.3.0
+  hydrated_bloc: ^10.1.1
+  replay_bloc: ^0.3.0
+  bloc_lint: ^0.3.2
+
 
 dev_dependencies:
   flutter_test:
