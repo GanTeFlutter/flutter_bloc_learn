@@ -15,6 +15,8 @@ class MainApp extends StatelessWidget {
           child: Column(
             children: [
               Text('Hello Worlasasdd!'),
+              Text('Hello World!'),
+              Text('Hello World!'),
             ],
           ),
         ),
