@@ -14,7 +14,7 @@ class MainApp extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
-              Text('Hello Worlasasdd!'),
+              Text('deneme'),
               Text('Hello World!'),
             ],
           ),
