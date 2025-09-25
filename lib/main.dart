@@ -1,23 +1,44 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc_example/product/init/app_initialize.dart';
+import 'package:flutter_bloc_example/product/init/state_initialize.dart';
+import 'package:flutter_bloc_example/product/navigation/app_gorouter.dart';
 
-void main() {
-  runApp(const MainApp());
+Future<void> main() async {
+  await AppInitialize().make();
+  runApp(StateInitialize(child: const _MyApp()));
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class _MyApp extends StatelessWidget {
+  const _MyApp();
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Column(
-            children: [
-              Text('deneme'),
-              Text('DENEM2S'),
-            ],
-          ),
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      title: 'ColorCraftPro',
+      routerConfig: router,
+    );
+  }
+}
+
+
+class HomeNavigation extends StatelessWidget {
+  const HomeNavigation({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          spacing: 20,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(onPressed: () {}, child: const Text('')),
+            ElevatedButton(onPressed: () {}, child: const Text('')),
+            ElevatedButton(onPressed: () {}, child: const Text('')),
+            ElevatedButton(onPressed: () {}, child: const Text('')),
+            ElevatedButton(onPressed: () {}, child: const Text('')),
+          ],
         ),
       ),
     );
