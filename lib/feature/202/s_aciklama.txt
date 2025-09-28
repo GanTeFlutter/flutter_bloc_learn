@@ -1,0 +1,7 @@
+provider olmadan da bir cubiti kullanabiliriz ancak context uzerinden erisemeyiz 
+
+
+initState içinde cubit oluşturmak → sadece bir cubit nesnesi üretmek ve aktif hale getirmek demek.
+
+Bu, provider kullanmakla aynı şey değil. Provider sadece sana otomatik yaşam döngüsü ve context üzerinden erişim kolaylığı sağlar.
+yani  provider ile olusturulan bloc bizim widget agacimiza baglaniyor ve alt kisimlardan context ile erisebiliyoruz

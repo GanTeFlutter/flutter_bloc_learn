@@ -1,0 +1,53 @@
+===============================
+🌟 Temel Widget’lar
+===============================
+
+🔹 BlocProvider
+   → Bir Bloc veya Cubit’i widget tree’ye sağlar.
+
+🔹 MultiBlocProvider
+   → Birden fazla Bloc/Cubit’i aynı anda sağlar.
+
+
+===============================
+🎧 Dinleme & Yeniden Oluşturma
+===============================
+
+🔹 BlocBuilder
+   → Bloc/Cubit’in state’i değiştikçe UI’ı yeniden oluşturur.
+
+🔹 BlocListener
+   → State değişimlerini dinler, ama UI’ı yeniden çizmez
+     (örn: SnackBar, Navigation).
+
+🔹 MultiBlocListener
+   → Birden fazla BlocListener kullanmaya yarar.
+
+
+===============================
+⚡ Hem Dinleyip Hem Çizen
+===============================
+
+🔹 BlocConsumer
+   → Hem BlocBuilder hem BlocListener işlevini aynı anda yapar.
+
+
+===============================
+🎯 State’e Direkt Erişim
+===============================
+
+🔹 BlocSelector
+   → State’in sadece belli bir kısmını dinler,
+     performans için idealdir.
+
+
+===============================
+📦 Kapsayıcı (Extension Widget’lar)
+===============================
+
+🔹 RepositoryProvider
+   → Dependency Injection için kullanılır
+     (örneğin service class’ları sağlamak).
+
+🔹 MultiRepositoryProvider
+   → Birden fazla repository sağlamak için.

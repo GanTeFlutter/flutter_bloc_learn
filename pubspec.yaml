@@ -21,6 +21,7 @@ dependencies:
   #navigation
   go_router: ^16.2.4
   meta: ^1.16.0
+  equatable: ^2.0.7
 
 
 dev_dependencies:

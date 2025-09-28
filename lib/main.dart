@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc_example/feature/202/no_context_conection_view.dart';
 import 'package:flutter_bloc_example/product/init/app_initialize.dart';
 import 'package:flutter_bloc_example/product/init/state_initialize.dart';
 import 'package:flutter_bloc_example/product/navigation/app_gorouter.dart';
@@ -24,7 +25,6 @@ class _MyApp extends StatelessWidget {
   }
 }
 
-
 class BaseNavigatonScreen extends StatelessWidget {
   const BaseNavigatonScreen({super.key});
 
@@ -40,9 +40,18 @@ class BaseNavigatonScreen extends StatelessWidget {
               onPressed: () => context.goNamed('StreamBaseView'),
               child: const Text('StreamBaseView'),
             ),
-            ElevatedButton(onPressed: () {}, child: const Text('Go to 202')),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => NoContextConectionView(),
+                  ),
+                );
+              },
+              child: const Text('NoContextConectionView'),
+            ),
           ],
-   
         ),
       ),
     );
