@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_example/feature/202/no_context_conection_view.dart';
+import 'package:flutter_bloc_example/feature/202/home/no_context_conection_view.dart';
+import 'package:flutter_bloc_example/feature/303/home/bloc_ob_deneme_view.dart';
 import 'package:flutter_bloc_example/product/init/app_initialize.dart';
 import 'package:flutter_bloc_example/product/init/state_initialize.dart';
 import 'package:flutter_bloc_example/product/navigation/app_gorouter.dart';
@@ -50,6 +51,17 @@ class BaseNavigatonScreen extends StatelessWidget {
                 );
               },
               child: const Text('NoContextConectionView'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BlocObDenemeView(),
+                  ),
+                );
+              },
+              child: const Text('BlocObDenemeView'),
             ),
           ],
         ),

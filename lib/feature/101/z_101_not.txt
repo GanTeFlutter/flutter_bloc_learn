@@ -7,6 +7,7 @@
 
 🔹 MultiBlocProvider
    → Birden fazla Bloc/Cubit’i aynı anda sağlar.
+lib/product/init/state_initialize.dart burada veli hocadan alinmis cok guzel bir ornek var
 
 
 ===============================
@@ -51,3 +52,12 @@
 
 🔹 MultiRepositoryProvider
    → Birden fazla repository sağlamak için.
+
+RepositoryProvider tek başına bir dependency (servis / repository) oluşturup widget ağacına (context’e) ekler.
+MultiRepositoryProvider ise birden fazla repository’yi tek seferde eklemene izin verir.
+AuthRepository ve UserRepository context’e eklenir.
+Uygulamanın altındaki her widget, bu repository’lere context.read<AuthRepository>() veya context.watch<UserRepository>() ile erişebilir.
+
+
+
+bu kısmın bloc çeşitlerini  505,506 örnek içinde farklı senaryolar ile kullacağız 

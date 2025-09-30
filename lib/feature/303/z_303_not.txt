@@ -1,0 +1,11 @@
+BLoC Observer Nedir?
+BlocObserver, tüm BLoC'larınızın yaşam döngüsünü (lifecycle) ve durumlarını merkezi bir yerden izlemenizi sağlayan bir 
+global izleyici/dinleyicidir. Production'da loglama, debugging ve analytics için kullanılır.
+
+🎯 Temel Kavram
+Her BLoC'ta olan her şeyi tek bir yerden izlersin:
+
+Hangi event tetiklendi?
+State nasıl değişti?
+Hata oluştu mu?
+BLoC oluşturuldu/kapatıldı mı?
