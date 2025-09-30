@@ -5,7 +5,7 @@ part 'bloc_ob_deneme_counter_event.dart';
 part 'bloc_ob_deneme_counter_state.dart';
 
 ///[BlocObDenemeCounterBloc] ı [StateInitialize] (main kısmında) içinde başlatıyoruz.
-
+//cubıt ile yapmak daha basit olurdu ancak eventleri de görmek için bloc ile yaptık.
 class BlocObDenemeCounterBloc
     extends Bloc<BlocObDenemeCounterEvent, BlocObDenemeCounterState> {
   BlocObDenemeCounterBloc() : super(BlocObDenemeCounterInitial()) {

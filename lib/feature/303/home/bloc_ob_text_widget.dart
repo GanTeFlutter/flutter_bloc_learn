@@ -29,7 +29,3 @@ Text _textWidget(BuildContext context, String text) {
   );
 }
 
-// TextStyle? _textStyle(BuildContext context) => Theme.of(context)
-//     .textTheme
-//     .displayLarge
-//     ?.copyWith(color: Colors.red, fontWeight: FontWeight.bold);

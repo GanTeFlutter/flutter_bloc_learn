@@ -1,0 +1,58 @@
+
+Burada flutter_bloc ile gelen tüm widgetler var Atladiysam lütfen belirtin 
+404 te bu widgetlerin parametrelerini anlamaya çalışıcaz mesela 
+BlocBuilder ın buildWhen parametresi ne işe yarar örnek üzerinden hepsini anlama çalışıcaz.
+
+1️⃣ BlocProvider
+
+create: BuildContext → Bloc → Bloc veya Cubit oluşturur
+child: Widget → Alt widget
+lazy: bool (opsiyonel, default: true) → Bloc’un lazy oluşturulup oluşturulmayacağını belirler
+
+2️⃣ MultiBlocProvider
+providers: List<BlocProvider> → Sağlanacak Bloc listesi
+child: Widget → Alt widget
+
+3️⃣ BlocBuilder
+
+bloc: Bloc? (opsiyonel) → Bu widget’a özel Bloc
+builder: (BuildContext, State) → Widget → UI rebuild fonksiyonu
+buildWhen: (previous, current) → bool (opsiyonel) → Hangi state değişimlerinde rebuild yapılacağını belirler
+
+4️⃣ BlocSelector
+
+bloc: Bloc? (opsiyonel) → Bu widget’a özel Bloc
+selector: (State) → SelectedState → Seçilecek alt state
+builder: (BuildContext, SelectedState) → Widget → UI rebuild fonksiyonu
+shouldRebuild: (previous, current) → bool (opsiyonel) → Seçilen state değişirse rebuild
+
+5️⃣ BlocListener
+
+bloc: Bloc? (opsiyonel) → Bu widget’a özel Bloc
+listener: (BuildContext, State) → void → Yan etki fonksiyonu
+listenWhen: (previous, current) → bool (opsiyonel) → Listener’ın hangi state değişimlerinde tetikleneceğini belirler
+child: Widget → Alt widget
+
+6️⃣ MultiBlocListener
+
+listeners: List<BlocListener> → Dinlenecek listener listesi
+child: Widget → Alt widget
+
+7️⃣ BlocConsumer
+
+bloc: Bloc? (opsiyonel) → Bu widget’a özel Bloc
+builder: (BuildContext, State) → Widget → UI rebuild fonksiyonu
+listener: (BuildContext, State) → void → Yan etki fonksiyonu
+buildWhen: (previous, current) → bool (opsiyonel) → UI rebuild kontrolü
+listenWhen: (previous, current) → bool (opsiyonel) → Listener tetikleme kontrolü
+
+8️⃣ RepositoryProvider
+
+create: BuildContext → Repository → Repository oluşturur
+child: Widget → Alt widget
+dispose: (Repository) → void (opsiyonel) → Dispose callback
+
+9️⃣ MultiRepositoryProvider
+
+providers: List<RepositoryProvider> → Sağlanacak repository listesi
+child: Widget → Alt widget

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_example/feature/303/state/bloc/bloc_ob_deneme_counter_bloc.dart';
 
-
 part '../home/bloc_ob_text_widget.dart';
 
 class BlocObDenemeView extends StatefulWidget {
