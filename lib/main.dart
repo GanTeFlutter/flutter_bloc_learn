@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_example/feature/202/home/no_context_conection_view.dart';
-import 'package:flutter_bloc_example/feature/303/home/bloc_ob_deneme_view.dart';
+import 'package:flutter_bloc_example/example/flutter_timer/view/timer_page.dart'
+    show TimerPage;
 import 'package:flutter_bloc_example/product/init/app_initialize.dart';
 import 'package:flutter_bloc_example/product/init/state_initialize.dart';
 import 'package:flutter_bloc_example/product/navigation/app_gorouter.dart';
 import 'package:flutter_bloc_example/product/theme/theme.dart';
-import 'package:go_router/go_router.dart';
 
 Future<void> main() async {
   await AppInitialize().make();
@@ -26,43 +25,34 @@ class _MyApp extends StatelessWidget {
   }
 }
 
-class BaseNavigatonScreen extends StatelessWidget {
-  const BaseNavigatonScreen({super.key});
+class SamplesScreen extends StatefulWidget {
+  const SamplesScreen({super.key});
 
+  @override
+  State<SamplesScreen> createState() => _SamplesScreenState();
+}
+
+class _SamplesScreenState extends State<SamplesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('SamplesScreen')),
       body: Center(
         child: Column(
-          spacing: 20,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ElevatedButton(
-              onPressed: () => context.goNamed('StreamBaseView'),
-              child: const Text('StreamBaseView'),
-            ),
+          spacing: 10,
+          children: [
+            ElevatedButton(onPressed: () {}, child: Text('TimerPage')),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => NoContextConectionView(),
-                  ),
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const TimerPage()),
                 );
               },
-              child: const Text('NoContextConectionView'),
+              child: Text('SamplesScreen'),
             ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => BlocObDenemeView(),
-                  ),
-                );
-              },
-              child: const Text('BlocObDenemeView'),
-            ),
+            ElevatedButton(onPressed: () {}, child: Text('SamplesScreen')),
+            Text('SamplesScreen'),
           ],
         ),
       ),

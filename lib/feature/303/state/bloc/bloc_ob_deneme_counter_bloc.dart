@@ -17,8 +17,6 @@ class BlocObDenemeCounterBloc
     });
   }
 
-  int counterValue = 0;
-
   void _onIncrementEvent(
     BlocObDenemeCounterIncrementEvent event,
     Emitter<BlocObDenemeCounterState> emit,

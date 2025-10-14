@@ -1,4 +1,4 @@
-part of '../home/bloc_ob_deneme_view.dart';
+part of 'bloc_ob_deneme_view.dart';
 
 final class _BlocObText extends StatelessWidget {
   const _BlocObText();
