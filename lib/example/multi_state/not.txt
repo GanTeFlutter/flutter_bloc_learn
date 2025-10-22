@@ -1,0 +1,10 @@
+
+
+bu örnekte BlocSelector hangi durumlarda rebuild olduğunu incelemek istedim 
+önceden oluşturuduğumuz MyBlocObserver den de onChange  çalışıyor yani değişine state
+izleyebiliyoruz ve HomeViewMulti ekrannımız da sadece o  BlocSelector<MultiStateCubit, MultiStateState, List<int>>(
+selector da kimi belirttiysek o tekrar çiziliyor
+
+ MultiStateCubit bir emit yapınca → BlocObserver.onChange tetiklendi.
+ Ama sadece BlocSelector’da selector sonucu değiştiyse → o builder yeniden çizildi.
+ Diğer BlocSelector veya widget’lar etkilenmedi.
