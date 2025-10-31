@@ -1,6 +1,0 @@
-include: package:bloc_lint/recommended.yaml
-
-
-analyzer:
-  errors:
-    avoid_print: ignore

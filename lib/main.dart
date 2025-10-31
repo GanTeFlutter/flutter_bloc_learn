@@ -18,7 +18,6 @@ class _MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.darkTheme,
       title: 'ColorCraftPro',
       routerConfig: router,
     );

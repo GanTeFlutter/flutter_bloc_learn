@@ -25,8 +25,7 @@ class MyBlocObserver extends BlocObserver {
   @override
   void onChange(BlocBase bloc, Change change) {
     super.onChange(bloc, change);
-    //Kırmızı verdim belli olsun diye
-    locator.logger.e('🔄 onChange -- ${bloc.runtimeType}, change: $change');
+    locator.logger.i('🔄 onChange -- ${bloc.runtimeType}, change: $change');
   }
 
   // Transition (event -> state geçişi) olduğunda
